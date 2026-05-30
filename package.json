@@ -1,0 +1,11 @@
+{
+  "name": "smp-auth-site",
+  "version": "1.0.0",
+  "description": "Simple static site with a file-backed account database.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

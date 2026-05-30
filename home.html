@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Global Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calar.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="#">Global</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#" id="logoutLink">Logout</a></li>
+            </ul>
+            <a class="btn" href="#" id="logoutButton">Logout</a>
+        </nav>
+        <div class="hero container">
+            <h1>Welcome to the modern global site</h1>
+            <p>Clean design, fast performance, and a linked login page for easy access.</p>
+            <p class="hero-cta"><a class="btn primary" href="#features">Explore Now</a></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="container features">
+            <article class="feature">
+                <h3>Stylish layout</h3>
+                <p>Beautiful templates that present your content clearly and professionally.</p>
+            </article>
+            <article class="feature">
+                <h3>Fully responsive</h3>
+                <p>Looks great on mobile, tablet, and desktop screens.</p>
+            </article>
+            <article class="feature">
+                <h3>Fast loading</h3>
+                <p>Optimized for speed and smooth user experience.</p>
+            </article>
+        </section>
+
+        <section id="about" class="container about">
+            <h2>About this site</h2>
+            <p>This is a simple, expandable template. After logging in, you get access to the full site content.</p>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>Global</strong>
+                <p>© 2026 All rights reserved.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email: hello@example.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const logout = () => {
+            localStorage.removeItem('loggedIn');
+            location.replace('LOGEN .HTML');
+        };
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            location.replace('LOGEN .HTML');
+        }
+        document.getElementById('logoutLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+        document.getElementById('logoutButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+    </script>
+</body>
+</html>
